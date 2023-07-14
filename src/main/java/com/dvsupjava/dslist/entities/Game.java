@@ -9,7 +9,7 @@ import java.util.Objects;
 public class Game {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String title;
     @Column(name = "game_year")
     private Integer year;
@@ -20,13 +20,13 @@ public class Game {
     @Column(columnDefinition = "TEXT")
     private String shortDescription;
     @Column(columnDefinition = "TEXT")
-    private String longDescription;
+    private String LongDescription;
 
     public Game(){
 
     }
 
-    public Game(long id, String title, Integer year, String genre, String platform, Double score, String imgUrl, String shortDescription, String longDescription) {
+    public Game(Long id, String title, Integer year, String genre, String platform, Double score, String imgUrl, String shortDescription, String LongDescription) {
         this.id = id;
         this.title = title;
         this.year = year;
@@ -35,14 +35,14 @@ public class Game {
         this.score = score;
         this.imgUrl = imgUrl;
         this.shortDescription = shortDescription;
-        this.longDescription = longDescription;
+        this.LongDescription = LongDescription;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -103,11 +103,11 @@ public class Game {
     }
 
     public String getLongDescription() {
-        return longDescription;
+        return LongDescription;
     }
 
-    public void setLongDescription(String longDescription) {
-        this.longDescription = longDescription;
+    public void setLongDescription(String LongDescription) {
+        this.LongDescription = LongDescription;
     }
 
     @Override
